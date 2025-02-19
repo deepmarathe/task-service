@@ -1,0 +1,12 @@
+fastapi==0.68.0
+uvicorn==0.15.0
+pydantic==1.8.2
+pytest==6.2.5
+httpx==0.18.2
+python-multipart==0.0.5
+prometheus-client==0.16.0
+starlette==0.14.2
+starlette-exporter==0.15.0
+pytest-cov==2.12.1
+black==22.3.0
+flake8==3.9.0
