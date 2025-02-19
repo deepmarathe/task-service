@@ -10,3 +10,4 @@ starlette-exporter==0.15.0
 pytest-cov==2.12.1
 black==22.3.0
 flake8==3.9.0
+requests==2.31.0
