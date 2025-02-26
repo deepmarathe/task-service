@@ -1,0 +1,26 @@
+# k8s/persistence/grafana-pv.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: grafana-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual     # Add this line
+  hostPath:
+    path: "/mnt/data/grafana"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual     # Add this line
+  resources:
+    requests:
+      storage: 1Gi
